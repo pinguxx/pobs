@@ -1,0 +1,14 @@
+@import "custom";
+@import "variables";
+@import "mixins";
+//core css
+@import "reboot";
+@import "type";
+//tags
+@import "card";
+
+:host {
+    .hidden {
+        display: none;
+    }
+}

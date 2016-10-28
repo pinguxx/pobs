@@ -1,0 +1,31 @@
+<!-- polymer -->
+<link rel="import" href="../../bower_components/polymer/polymer-element.html">
+<!-- libs -->
+<link rel="import" href="/src/lib/mixwith.html">
+<!-- behaviors -->
+<link rel="import" href="/src/behaviors/inverse-behavior.html">
+<link rel="import" href="/src/behaviors/parent-style-behavior.html">
+<!-- card elements -->
+<link rel="import" href="/src/pobs-card/pobs-card-header.html">
+<link rel="import" href="/src/pobs-card/pobs-card-title.html">
+<link rel="import" href="/src/pobs-card/pobs-card-subtitle.html">
+<link rel="import" href="/src/pobs-card/pobs-card-block.html">
+<link rel="import" href="/src/pobs-card/pobs-card-blockquote.html">
+<link rel="import" href="/src/pobs-card/pobs-card-text.html">
+<link rel="import" href="/src/pobs-card/pobs-card-link.html">
+<link rel="import" href="/src/pobs-card/pobs-card-img.html">
+<link rel="import" href="/src/pobs-card/pobs-card-img-overlay.html">
+<link rel="import" href="/src/pobs-card/pobs-card-footer.html">
+<!--style-->
+<link rel="import" href="/src/pobs-card/pobs-card-style-shared.html">
+<!-- template -->
+<dom-module id="pobs-card">
+    <template>
+        <style include="pobs-card-style-shared"></style>
+        <div id="container" class$="card card-{{style}}">
+            <slot></slot>
+        </div>
+    </template>
+    <script src="/src/pobs-card/pobs-card.es6"></script>
+</dom-module>
+<!-- TODO: nav headers, list-group -->

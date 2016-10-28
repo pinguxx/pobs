@@ -1,0 +1,23 @@
+<link rel="import" href="../../bower_components/polymer/polymer-element.html">
+<!-- libs -->
+<link rel="import" href="/src/lib/mixwith.html">
+<!-- behaviors -->
+<link rel="import" href="/src/behaviors/parent-style-behavior.html">
+<!-- alert elements -->
+<link rel="import" href="/src/pobs-alert/pobs-alert-link.html">
+<!--style-->
+<link rel="import" href="/src/pobs-alert/pobs-alert-style.html">
+
+<dom-module id="pobs-alert">
+    <template>
+        <style include="pobs-alert-style"></style>
+        <div class$="style-scope pobs-alert alert alert-{{style}}" id="alertw" role="alert">
+            <button hidden$="{{!dismissible}}" on-click="close" on-tap="close" id="closeBtn" type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            <h4 hidden$="{{!hasHeader}}" class="alert-heading"><slot id="heading" name="heading"></slot></h4>
+            <slot></slot>
+        </div>
+    </template>
+    <script src="/src/pobs-alert/pobs-alert.es6"></script>
+</dom-module>

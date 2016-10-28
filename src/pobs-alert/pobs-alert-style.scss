@@ -1,0 +1,18 @@
+@import "custom";
+@import "variables";
+@import "mixins";
+
+//core css
+@import "reboot";
+@import "type";
+//components
+@import "animation";
+@import "close";
+//alert
+@import "alert";
+
+:host {
+    .hidden {
+        display: none;
+    }
+}

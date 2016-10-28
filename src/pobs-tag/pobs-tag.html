@@ -1,0 +1,13 @@
+<link rel="import" href="../../bower_components/polymer/polymer-element.html">
+
+<!--style-->
+<link rel="import" href="/src/pobs-tag/pobs-tag-style.html">
+
+<dom-module id="pobs-tag">
+    <template>
+        <style include="pobs-tag-style"></style>
+        <span id="spanContainer" class$="tag tag-{{style}}" hidden$="{{hasHref}}"><slot id="tagText"></slot></span>
+        <a id="aContainer" class$="tag tag-{{style}}" href="{{href}}" hidden$="{{!hasHref}}"></a>
+    </template>
+    <script src="/src/pobs-tag/pobs-tag.es6"></script>
+</dom-module>

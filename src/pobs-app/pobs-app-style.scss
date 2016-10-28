@@ -1,0 +1,13 @@
+@import "bootstrap-grid";
+@import "bootstrap-reboot";
+
+:host {
+    .mycard {
+        width: 350px;
+        display: block;
+        position: relative;
+    }
+    pobs-card-link + pobs-card-link {
+      margin-left: 1.25rem; 
+    }
+}

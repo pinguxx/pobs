@@ -1,0 +1,14 @@
+<link rel="import" href="../../bower_components/polymer/polymer-element.html">
+
+<!--style-->
+<link rel="import" href="/src/pobs-card/pobs-card-style-shared.html">
+
+<dom-module id="pobs-card-title">
+    <template>
+        <style include="pobs-card-style-shared"></style>
+        <div id="container">
+            <div class$="{{baseStyle}} {{style}}"><slot></slot></div>
+        </div>
+    </template>
+    <script src="/src/pobs-card/pobs-card-title.es6"></script>
+</dom-module>

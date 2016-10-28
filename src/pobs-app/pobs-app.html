@@ -1,0 +1,158 @@
+<link rel="import" href="../../bower_components/polymer/polymer-element.html">
+<link rel="import" href="/src/pobs-alert/pobs-alert.html">
+<link rel="import" href="/src/pobs-tag/pobs-tag.html">
+<link rel="import" href="/src/pobs-card/pobs-card.html">
+
+<!--style-->
+<link rel="import" href="/src/pobs-app/pobs-app-style.html">
+
+<dom-module id="pobs-app">
+    <template>
+        <style include="pobs-app-style"></style>
+        <div class="container">
+            <h1>alerts</h1>
+            <pobs-alert style="danger" destroyable="true">
+                <span slot="heading">Alert title</span>
+                Something wrong happened... maybe. <pobs-alert-link href="#">click here for help</pobs-alert-link>.
+            </pobs-alert>
+            <pobs-alert style="success" id="notitle" destroyable="true">
+                Where is my title?
+            </pobs-alert>
+            <pobs-alert style="info" id="info" dismissible destroyable="true">
+                Close me
+            </pobs-alert>
+            <pobs-alert style="warning" id="warning" dismissible>
+                You can't kill me
+            </pobs-alert>
+            <button id="show">Show</button>
+            <button id="hide">hide</button>
+
+            <h1>Tags</h1>
+            <h1>Example heading <pobs-tag>New</pobs-tag></h1>
+            <h2>Example heading <pobs-tag pill>New</pobs-tag></h2>
+            <h3>Example heading <pobs-tag>New</pobs-tag></h3>
+            <h4>Example heading <pobs-tag>New</pobs-tag></h4>
+            <h5>Example heading <pobs-tag pill>New</pobs-tag></h5>
+            <h6>Example heading <pobs-tag>New</pobs-tag></h6>
+            <h2>tags types</h2>
+            <pobs-tag style="default">Default</pobs-tag>
+            <pobs-tag style="primary" pill>Primary</pobs-tag>
+            <pobs-tag style="success">Success</pobs-tag>
+            <pobs-tag style="info" pill>Info</pobs-tag>
+            <pobs-tag style="warning">Warning</pobs-tag>
+            <pobs-tag id="dangerTag" style="danger">Danger</pobs-tag>
+            <pobs-tag id="dangerLinkTag" style="danger" href="someurl" pill>link</pobs-tag>
+            <h2>Empty tag, hidden automagically</h2>
+            <pobs-tag id="empty" style="danger" href="someurl" pill></pobs-tag>
+
+            <h1>Cards</h1>
+            <h2>base</h2>
+            <pobs-card>
+                <div class="card-block">yup border</div>
+            </pobs-card>
+            <h2>base with block</h2>
+            <pobs-card block>
+                yup border
+            </pobs-card>
+            <h2>base with block inverse primary</h2>
+            <pobs-card block inverse style="primary">
+                <pobs-card-title style="h5">inverse</pobs-card-title>
+            </pobs-card>
+            <h2>base > block > title text-xs-center outline</h2>
+            <pobs-card outline style="danger" class="text-xs-center">
+                <pobs-card-block>
+                    <pobs-card-title style="h4">Title here</pobs-card-title>
+                    other stuff
+                </pobs-card-block>
+            </pobs-card>
+            <h2>base > block > title primary inverse </h2>
+            <pobs-card style="primary" inverse>
+                <pobs-card-block>
+                    <pobs-card-title style="h4">Title here</pobs-card-title>
+                    other stuff
+                </pobs-card-block>
+            </pobs-card>
+            <h2>base > block > title + text</h2>
+            <pobs-card outline>
+                <pobs-card-block>
+                    <pobs-card-title style="h4">Title here</pobs-card-title>
+                    <pobs-card-text>other stuff</pobs-card-text>
+                </pobs-card-block>
+            </pobs-card>
+            <h2>base > block > title + text, primary inverse </h2>
+            <pobs-card style="primary" inverse>
+                <pobs-card-block >
+                    <pobs-card-title style="h4" >Title here</pobs-card-title>
+                    <pobs-card-text class="text-xs-center">other stuff</pobs-card-text>
+                    <pobs-card-link >Link 2</pobs-card-link>
+                </pobs-card-block>
+            </pobs-card>
+            <h2>base > block + img + block </h2>
+            <pobs-card class="mycard">
+                <pobs-card-block>
+                    <pobs-card-title style="h4">Title above</pobs-card-title>
+                    <pobs-card-subtitle>other stuff</pobs-card-subtitle>
+                </pobs-card-block>
+                <pobs-card-img src="http://placehold.it/350x150"></pobs-card-img>
+                <pobs-card-block class="myblock">
+                    <pobs-card-link>Link 1</pobs-card-link>
+                    <pobs-card-link>Link 2</pobs-card-link>
+                </pobs-card-block>
+            </pobs-card>
+            <h2>base > img + block + img </h2>
+            <pobs-card class="mycard">
+                <pobs-card-img src="http://placehold.it/350x150" position="top"></pobs-card-img>
+                <pobs-card-block>
+                    <pobs-card-title style="h4">Title above</pobs-card-title>
+                    <pobs-card-subtitle>other stuff</pobs-card-subtitle>
+                </pobs-card-block>
+                <pobs-card-img src="http://placehold.it/350x150" class="fullsize" position="bottom"></pobs-card-img>
+            </pobs-card>
+            <h2>base > img overlay </h2>
+            <pobs-card class="mycard" inverse>
+                <pobs-card-img src="http://placehold.it/350x150" overlay></pobs-card-img>
+                <pobs-card-img-overlay>
+                    <pobs-card-title style="h4">Some image</pobs-card-title>
+                    <pobs-card-subtitle>overlay here</pobs-card-subtitle>
+                    <pobs-card-text><small class="text-muted">Last updated 3 mins ago</small> cool</pobs-card-text>
+                </pobs-card-img-overlay>
+            </pobs-card>
+            <h2>base > header + block > title + text </h2>
+            <pobs-card>
+                <pobs-card-header>header here</pobs-card-header>
+                <pobs-card-block >
+                    <pobs-card-title style="h4" >Title here</pobs-card-title>
+                    <pobs-card-text class="text-xs-center">other stuff</pobs-card-text>
+                    <pobs-card-link >Link 2</pobs-card-link>
+                </pobs-card-block>
+                <pobs-card-block>
+                    <pobs-card-blockquote>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+                        <footer>Someone famous in <cite title="Source Title">Source Title</cite></footer>
+                    </pobs-card-blockquote>
+                </pobs-card-block>
+            </pobs-card>
+            <h2>base > header + footer + block > title + text </h2>
+            <pobs-card inverse style="primary">
+                <pobs-card-header>primary title here</pobs-card-header>
+                <pobs-card-block >
+                    <pobs-card-title style="h4" >Title here</pobs-card-title>
+                    <pobs-card-text class="text-xs-center">other stuff</pobs-card-text>
+                    <pobs-card-link >Link 2</pobs-card-link>
+                </pobs-card-block>
+                <pobs-card-footer style="h3">big footer here</pobs-card-footer>
+            </pobs-card>
+            <h2>base > header + footer + block > title + text </h2>
+            <pobs-card outline style="danger">
+                <pobs-card-header style="h2">danger outline header here</pobs-card-header>
+                <pobs-card-block >
+                    <pobs-card-title style="h4" >Title here</pobs-card-title>
+                    <pobs-card-text class="text-xs-center">other stuff</pobs-card-text>
+                    <pobs-card-link >Link 2</pobs-card-link>
+                </pobs-card-block>
+                <pobs-card-footer>danger outline footer here</pobs-card-footer>
+            </pobs-card>
+        </div>
+    </template>
+    <script src="/src/pobs-app/pobs-app.es6"></script>
+</dom-module>

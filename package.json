@@ -1,0 +1,31 @@
+{
+  "name": "polymer-bs",
+  "version": "1.0.0",
+  "description": "polymer bootstrap",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "polymer",
+    "bootstrap"
+  ],
+  "author": "mrpix",
+  "license": "ISC",
+  "devDependencies": {
+    "css-transform": "^1.0.0",
+    "fs": "0.0.1-security",
+    "gulp": "^3.9.1",
+    "gulp-es6-sass": "0.0.8",
+    "map-stream": "0.0.6",
+    "mixwith": "^0.1.1",
+    "node-sass": "^3.7.0",
+    "path": "^0.12.7"
+  },
+  "dependencies": {
+    "mixwith": "^0.1.1"
+  }
+}

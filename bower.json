@@ -1,0 +1,11 @@
+{
+  "name": "pobs",
+  "main": "index.html",
+  "dependencies": {
+    "polymer": "Polymer/polymer#2.0-preview",
+    "bootstrap": "v4.0.0-alpha.5"
+  },
+  "devDependencies": {
+    "web-component-tester": "^4.0.0"
+  }
+}
